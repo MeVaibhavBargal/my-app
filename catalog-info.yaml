@@ -7,6 +7,13 @@ metadata:
   annotations:
     github.com/project-slug: backstage/backstage
     backstage.io/techdocs-ref: github:https://github.com/backstage/backstage.git
+    tags:
+    - java
+    links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
 spec:
   type: website
   owner: vaibhav@gmail.com
