@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: passenger-backend
+  name: my-backend-app
   description: |
-    Lookup information on active passengers. Name, location etc.
+    my-backend-app.
   links:
     - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
       title: What is the Passenger Backend?
@@ -15,7 +15,6 @@ metadata:
       icon: dashboard
   annotations:
     github.com/project-slug: RoadieHQ/sample-service
-    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
     sentry.io/project-slug: sample-service
     cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
     backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
@@ -25,10 +24,10 @@ metadata:
     backstage.io/kubernetes-id: sample-service
 spec:
   type: service
-  owner: roadie
+  owner: vaibhav
   lifecycle: production
   system: passengers
   providesApis:
-    - passengers-api
+    - my-api
   dependsOn:
-    - Component:core-auth-module
+    - Component:my-app-module
